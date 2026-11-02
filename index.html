@@ -395,9 +395,9 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
 <script>
 const S=[...document.querySelectorAll('.s')],stage=document.getElementById('stage'),cnt=document.getElementById('count');
 const q=new URLSearchParams(location.search).get('s');
-let i=Math.min(q!==null?+q:(+localStorage.getItem('ugcDeck')||0),S.length-1);
+let i=Math.min(q!==null?+q:0,S.length-1);
 function fit(){const k=Math.min(innerWidth/1920,innerHeight/1080);stage.style.transform=`translate(-50%,-50%) scale(${k})`}
-let show=function(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,j)=>{s.classList.toggle('on',j===i);if(j!==i)s.querySelectorAll('video').forEach(v=>v.pause())});localStorage.setItem('ugcDeck',i);cnt.textContent=(i+1)+' / '+S.length}
+let show=function(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,j)=>{s.classList.toggle('on',j===i);if(j!==i)s.querySelectorAll('video').forEach(v=>v.pause())});cnt.textContent=(i+1)+' / '+S.length}
 addEventListener('keydown',e=>{if(document.getElementById('lb')?.classList.contains('on'))return;if(['ArrowRight','PageDown',' '].includes(e.key)&&e.target.tagName!=='VIDEO'){e.preventDefault();show(i+1)}if(['ArrowLeft','PageUp'].includes(e.key))show(i-1)});
 const P=document.getElementById('prev'),N=document.getElementById('next');
 P.onclick=()=>show(i-1);N.onclick=()=>show(i+1);
