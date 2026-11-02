@@ -58,6 +58,13 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
 .nav[disabled]{opacity:.25;cursor:default;background:rgba(20,20,22,.72);border-color:#3a3836}
 #prev{left:18px}#next{right:18px}
 @media print{.nav,#count{display:none}}
+.fsb{margin-top:12px;display:inline-flex;align-items:center;gap:10px;font:600 18px "Cascadia Mono",Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:transparent;border:1px solid #3a3836;border-radius:8px;padding:10px 16px;cursor:pointer}
+.fsb:hover{background:#FF3B30;border-color:#FF3B30}
+#lb{position:fixed;inset:0;background:#000;display:none;align-items:center;justify-content:center;z-index:100}
+#lb.on{display:flex}
+#lb video{height:100vh;width:calc(100vh*9/16);max-width:100vw;object-fit:contain;background:#000;display:block}
+#lbx{position:fixed;top:22px;right:26px;width:52px;height:52px;border-radius:50%;border:1px solid #3a3836;background:rgba(20,20,22,.8);color:#fff;font:400 30px/1 system-ui;cursor:pointer;z-index:101}
+#lbx:hover{background:#FF3B30;border-color:#FF3B30}
 </style>
 </head>
 <body>
@@ -102,8 +109,8 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
 <section class="s" data-id="sample">
   <div class="k">Contoh · dibuat end-to-end hari ini</div>
   <div class="vids">
-    <div class="vid"><video src="media/nuva_id_v5.mp4" controls playsinline preload="metadata" poster="media/nuva_id_v5.jpg"></video><div class="cap">Bahasa Indonesia</div></div>
-    <div class="vid"><video src="media/nuva_en_v5.mp4" controls playsinline preload="metadata" poster="media/nuva_en_v5.jpg"></video><div class="cap">English</div></div>
+    <div class="vid"><video src="media/nuva_id_v5.mp4" controls controlslist="nofullscreen" disablepictureinpicture playsinline preload="metadata" poster="media/nuva_id_v5.jpg"></video><div class="cap">Bahasa Indonesia</div><button class="fsb" type="button">&#x26F6; Layar penuh</button></div>
+    <div class="vid"><video src="media/nuva_en_v5.mp4" controls controlslist="nofullscreen" disablepictureinpicture playsinline preload="metadata" poster="media/nuva_en_v5.jpg"></video><div class="cap">English</div><button class="fsb" type="button">&#x26F6; Layar penuh</button></div>
     <div style="flex:1;padding-top:10px">
       <h2 style="font-size:58px">“NUVA Bright Serum”<br><span class="mute">brand fiktif, skincare</span></h2>
       <table>
@@ -227,6 +234,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
 
 </div>
 
+<div id="lb" role="dialog" aria-label="Video layar penuh"><video controls controlslist="nofullscreen" disablepictureinpicture playsinline></video><button id="lbx" aria-label="Tutup">&times;</button></div>
 <button class="nav" id="prev" aria-label="Slide sebelumnya">&#8249;</button><button class="nav" id="next" aria-label="Slide berikutnya">&#8250;</button>
 <div id="count" style="position:fixed;right:18px;bottom:12px;font:500 13px Consolas,monospace;color:#666"></div>
 <script>
@@ -235,14 +243,26 @@ const q=new URLSearchParams(location.search).get('s');
 let i=Math.min(q!==null?+q:(+localStorage.getItem('ugcDeck')||0),S.length-1);
 function fit(){const k=Math.min(innerWidth/1920,innerHeight/1080);stage.style.transform=`translate(-50%,-50%) scale(${k})`}
 let show=function(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,j)=>{s.classList.toggle('on',j===i);if(j!==i)s.querySelectorAll('video').forEach(v=>v.pause())});localStorage.setItem('ugcDeck',i);cnt.textContent=(i+1)+' / '+S.length}
-addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)&&e.target.tagName!=='VIDEO'){e.preventDefault();show(i+1)}if(['ArrowLeft','PageUp'].includes(e.key))show(i-1)});
+addEventListener('keydown',e=>{if(document.getElementById('lb')?.classList.contains('on'))return;if(['ArrowRight','PageDown',' '].includes(e.key)&&e.target.tagName!=='VIDEO'){e.preventDefault();show(i+1)}if(['ArrowLeft','PageUp'].includes(e.key))show(i-1)});
 const P=document.getElementById('prev'),N=document.getElementById('next');
 P.onclick=()=>show(i-1);N.onclick=()=>show(i+1);
 const _show=show;show=n=>{_show(n);P.disabled=i===0;N.disabled=i===S.length-1};
-let wl=0;addEventListener('wheel',e=>{const d=Math.abs(e.deltaY)>Math.abs(e.deltaX)?e.deltaY:e.deltaX;if(Math.abs(d)<8)return;e.preventDefault();const t=Date.now();if(t-wl<650)return;wl=t;show(i+(d>0?1:-1))},{passive:false});
+let wl=0;addEventListener('wheel',e=>{if(document.getElementById('lb').classList.contains('on'))return;const d=Math.abs(e.deltaY)>Math.abs(e.deltaX)?e.deltaY:e.deltaX;if(Math.abs(d)<8)return;e.preventDefault();const t=Date.now();if(t-wl<650)return;wl=t;show(i+(d>0?1:-1))},{passive:false});
 let tx=null,ty=null;addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
 addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.max(Math.abs(dx),Math.abs(dy))>50)show(i+((Math.abs(dx)>Math.abs(dy)?-dx:-dy)>0?1:-1));tx=null});
 addEventListener('resize',fit);fit();show(i);
+
+// vertical fullscreen viewer (native video fullscreen stretches 9:16 to the landscape screen)
+const LB=document.getElementById('lb'),LV=LB.querySelector('video');let srcV=null;
+function lbOpen(v){srcV=v;v.pause();LV.src=v.currentSrc||v.src;LV.currentTime=v.currentTime||0;LB.classList.add('on');
+ (LB.requestFullscreen?LB.requestFullscreen():Promise.resolve()).catch(()=>{}).finally(()=>LV.play().catch(()=>{}))}
+function lbClose(){if(!LB.classList.contains('on'))return;LV.pause();if(srcV)srcV.currentTime=LV.currentTime;LB.classList.remove('on');
+ if(document.fullscreenElement)document.exitFullscreen().catch(()=>{})}
+document.querySelectorAll('.fsb').forEach(b=>b.onclick=()=>lbOpen(b.parentElement.querySelector('video')));
+document.querySelectorAll('.vid video').forEach(v=>v.addEventListener('dblclick',e=>{e.preventDefault();lbOpen(v)}));
+document.getElementById('lbx').onclick=lbClose;
+document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement)lbClose()});
+addEventListener('keydown',e=>{if(LB.classList.contains('on')&&e.key==='Escape')lbClose()},true);
 </script>
 </body>
 </html>
