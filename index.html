@@ -48,6 +48,15 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
 .big{font-size:180px;font-weight:700;letter-spacing:-.04em;line-height:1}
 .tag{display:inline-block;font:600 18px "Cascadia Mono",Consolas,monospace;padding:6px 12px;border:1px solid var(--line);border-radius:6px;color:var(--mute);margin-right:8px}
 @media print{html,body{overflow:visible}#stage{position:static;transform:none!important}.s{display:flex!important;position:relative;page-break-after:always;height:1080px}}
+
+.nav{position:fixed;top:50%;transform:translateY(-50%);width:56px;height:56px;border-radius:50%;border:1px solid #3a3836;
+ background:rgba(20,20,22,.72);color:#f4f1ec;font:400 30px/1 system-ui,sans-serif;display:flex;align-items:center;justify-content:center;
+ cursor:pointer;z-index:10;transition:background .15s,opacity .15s;user-select:none}
+.nav:hover{background:#FF3B30;border-color:#FF3B30}
+.nav:focus-visible{outline:2px solid #FF3B30;outline-offset:3px}
+.nav[disabled]{opacity:.25;cursor:default;background:rgba(20,20,22,.72);border-color:#3a3836}
+#prev{left:18px}#next{right:18px}
+@media print{.nav,#count{display:none}}
 </style>
 </head>
 <body>
@@ -221,14 +230,21 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
 
 </div>
 
+<button class="nav" id="prev" aria-label="Slide sebelumnya">&#8249;</button><button class="nav" id="next" aria-label="Slide berikutnya">&#8250;</button>
 <div id="count" style="position:fixed;right:18px;bottom:12px;font:500 13px Consolas,monospace;color:#666"></div>
 <script>
 const S=[...document.querySelectorAll('.s')],stage=document.getElementById('stage'),cnt=document.getElementById('count');
 const q=new URLSearchParams(location.search).get('s');
 let i=Math.min(q!==null?+q:(+localStorage.getItem('ugcDeck')||0),S.length-1);
 function fit(){const k=Math.min(innerWidth/1920,innerHeight/1080);stage.style.transform=`translate(-50%,-50%) scale(${k})`}
-function show(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,j)=>{s.classList.toggle('on',j===i);if(j!==i)s.querySelectorAll('video').forEach(v=>v.pause())});localStorage.setItem('ugcDeck',i);cnt.textContent=(i+1)+' / '+S.length}
+let show=function(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,j)=>{s.classList.toggle('on',j===i);if(j!==i)s.querySelectorAll('video').forEach(v=>v.pause())});localStorage.setItem('ugcDeck',i);cnt.textContent=(i+1)+' / '+S.length}
 addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)&&e.target.tagName!=='VIDEO'){e.preventDefault();show(i+1)}if(['ArrowLeft','PageUp'].includes(e.key))show(i-1)});
+const P=document.getElementById('prev'),N=document.getElementById('next');
+P.onclick=()=>show(i-1);N.onclick=()=>show(i+1);
+const _show=show;show=n=>{_show(n);P.disabled=i===0;N.disabled=i===S.length-1};
+let wl=0;addEventListener('wheel',e=>{const d=Math.abs(e.deltaY)>Math.abs(e.deltaX)?e.deltaY:e.deltaX;if(Math.abs(d)<8)return;e.preventDefault();const t=Date.now();if(t-wl<650)return;wl=t;show(i+(d>0?1:-1))},{passive:false});
+let tx=null,ty=null;addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
+addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.max(Math.abs(dx),Math.abs(dy))>50)show(i+((Math.abs(dx)>Math.abs(dy)?-dx:-dy)>0?1:-1));tx=null});
 addEventListener('resize',fit);fit();show(i);
 </script>
 </body>
