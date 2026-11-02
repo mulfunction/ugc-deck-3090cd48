@@ -65,6 +65,14 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
 #lb video{height:100vh;width:calc(100vh*9/16);max-width:100vw;object-fit:contain;background:#000;display:block}
 #lbx{position:fixed;top:22px;right:26px;width:52px;height:52px;border-radius:50%;border:1px solid #3a3836;background:rgba(20,20,22,.8);color:#fff;font:400 30px/1 system-ui;cursor:pointer;z-index:101}
 #lbx:hover{background:#FF3B30;border-color:#FF3B30}
+.dg{width:100%;height:auto;display:block;border:1px solid #2a2928;border-radius:14px;background:#121214}
+.stats{display:flex;flex-direction:column;gap:22px}
+.stats>div{border-top:2px solid #2a2928;padding-top:16px}
+.stats>div:first-child{border-color:#FF3B30}
+.sn{font-size:76px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.sn small{font-size:28px;color:var(--mute);font-weight:600}
+.stats>div:first-child .sn{color:#FF3B30}
+.sl{font-size:22px;line-height:1.35;color:var(--mute);margin-top:8px}
 </style>
 </head>
 <body>
@@ -124,6 +132,57 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
   <div class="foot"><img src="media/logo.svg" alt=""><span>03</span></div>
 </section>
 
+<section class="s" data-id="kecepatan">
+  <div class="k">Internal · seberapa cepat contoh pertama dibuat</div>
+  <h2 style="font-size:60px">Dari brief ke 2 iklan jadi: ±36 menit.</h2>
+  <div style="display:grid;grid-template-columns:1180px 1fr;gap:56px;margin-top:30px;align-items:start">
+    <div><svg viewBox="0 0 1180 640" class="dg" role="img" aria-label="Timeline contoh pertama">
+<defs><marker id="ah" markerWidth="12" markerHeight="9" refX="11" refY="4.5" orient="auto"><polygon points="0 0, 12 4.5, 0 9" fill="#6b6762"/></marker><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1d1c1b" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid)"/>
+<line x1="355.9375" y1="46" x2="355.9375" y2="564" stroke="#2a2928" stroke-width="1"/><text x="355.9375" y="38" fill="#9b978f" font-size="15" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">10:30</text>
+<line x1="485.625" y1="46" x2="485.625" y2="564" stroke="#2a2928" stroke-width="1"/><text x="485.625" y="38" fill="#9b978f" font-size="15" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">10:40</text>
+<line x1="615.3125" y1="46" x2="615.3125" y2="564" stroke="#2a2928" stroke-width="1"/><text x="615.3125" y="38" fill="#9b978f" font-size="15" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">10:50</text>
+<line x1="745.0" y1="46" x2="745.0" y2="564" stroke="#2a2928" stroke-width="1"/><text x="745.0" y="38" fill="#9b978f" font-size="15" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">11:00</text>
+<line x1="874.6875" y1="46" x2="874.6875" y2="564" stroke="#2a2928" stroke-width="1"/><text x="874.6875" y="38" fill="#9b978f" font-size="15" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">11:10</text>
+<line x1="1004.375" y1="46" x2="1004.375" y2="564" stroke="#2a2928" stroke-width="1"/><text x="1004.375" y="38" fill="#9b978f" font-size="15" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">11:20</text>
+<text x="314" y="95" fill="#f4f1ec" font-size="17" text-anchor="end" font-family="Cascadia Mono,Consolas,monospace">Brief & tanya-jawab</text>
+<rect x="330.0" y="70" width="103.75" height="34" rx="6" fill="#101012"/><rect x="330.0" y="70" width="103.75" height="34" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="2"/>
+<text x="443.75" y="93" fill="#fb7185" font-size="15" font-family="Cascadia Mono,Consolas,monospace">2 ronde</text>
+<text x="314" y="151" fill="#f4f1ec" font-size="17" text-anchor="end" font-family="Cascadia Mono,Consolas,monospace">Riset 3 sub-agent</text>
+<rect x="381.875" y="126" width="38.90625" height="34" rx="6" fill="#101012"/><rect x="381.875" y="126" width="38.90625" height="34" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="2"/>
+<text x="430.78125" y="149" fill="#34d399" font-size="15" font-family="Cascadia Mono,Consolas,monospace">2,5 mnt</text>
+<text x="314" y="207" fill="#f4f1ec" font-size="17" text-anchor="end" font-family="Cascadia Mono,Consolas,monospace">Anchor persona + produk</text>
+<rect x="433.75" y="182" width="38.90625" height="34" rx="6" fill="#101012"/><rect x="433.75" y="182" width="38.90625" height="34" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="2"/>
+<text x="482.65625" y="205" fill="#fbbf24" font-size="15" font-family="Cascadia Mono,Consolas,monospace">3 mnt</text>
+<text x="314" y="263" fill="#f4f1ec" font-size="17" text-anchor="end" font-family="Cascadia Mono,Consolas,monospace">Sheet produk·persona·lokasi</text>
+<rect x="472.65625" y="238" width="103.75" height="34" rx="6" fill="#101012"/><rect x="472.65625" y="238" width="103.75" height="34" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="2"/>
+<text x="586.40625" y="261" fill="#fbbf24" font-size="15" font-family="Cascadia Mono,Consolas,monospace">8 mnt</text>
+<text x="314" y="319" fill="#f4f1ec" font-size="17" text-anchor="end" font-family="Cascadia Mono,Consolas,monospace">Kit + submit render</text>
+<rect x="576.40625" y="294" width="12.96875" height="34" rx="6" fill="#101012"/><rect x="576.40625" y="294" width="12.96875" height="34" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="2"/>
+<text x="314" y="375" fill="#f4f1ec" font-size="17" text-anchor="end" font-family="Cascadia Mono,Consolas,monospace">Render Wan 3.0 · ID & EN</text>
+<rect x="589.375" y="350" width="169.890625" height="34" rx="6" fill="#101012"/><rect x="589.375" y="350" width="169.890625" height="34" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="2"/>
+<text x="769.265625" y="373" fill="#fbbf24" font-size="15" font-family="Cascadia Mono,Consolas,monospace">13,4 mnt paralel</text>
+<text x="314" y="431" fill="#f4f1ec" font-size="17" text-anchor="end" font-family="Cascadia Mono,Consolas,monospace">Deck HTML (sambil render)</text>
+<rect x="615.3125" y="406" width="129.6875" height="34" rx="6" fill="#101012"/><rect x="615.3125" y="406" width="129.6875" height="34" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="2"/>
+<text x="314" y="487" fill="#f4f1ec" font-size="17" text-anchor="end" font-family="Cascadia Mono,Consolas,monospace">Caption + logo + QA</text>
+<rect x="759.265625" y="462" width="37.609375" height="34" rx="6" fill="#101012"/><rect x="759.265625" y="462" width="37.609375" height="34" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2"/>
+<text x="806.875" y="485" fill="#22d3ee" font-size="15" font-family="Cascadia Mono,Consolas,monospace">3 mnt</text>
+<text x="314" y="543" fill="#f4f1ec" font-size="17" text-anchor="end" font-family="Cascadia Mono,Consolas,monospace">Revisi pelafalan 3 shot</text>
+<rect x="874.6875" y="518" width="129.6875" height="34" rx="6" fill="#101012"/><rect x="874.6875" y="518" width="129.6875" height="34" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="2"/>
+<text x="1014.375" y="541" fill="#fb7185" font-size="15" font-family="Cascadia Mono,Consolas,monospace">re-take ±10 mnt</text>
+<line x1="796.875" y1="46" x2="796.875" y2="574" stroke="#FF3B30" stroke-width="2.5" stroke-dasharray="7,5"/>
+<rect x="646.875" y="582" width="300" height="40" rx="20" fill="#FF3B30"/><text x="796.875" y="608" fill="#fff" font-size="17" font-weight="700" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">11:04 · 2 iklan jadi</text>
+</svg></div>
+    <div class="stats">
+      <div><div class="sn">36<small> mnt</small></div><div class="sl">brief → iklan ID + EN jadi (10:28 → 11:04)</div></div>
+      <div><div class="sn">13<small> mnt</small></div><div class="sl">render model video — bagian terlama, ID & EN paralel</div></div>
+      <div><div class="sn">±5<small> mnt</small></div><div class="sl">waktu manusia: jawab brief + approve (estimasi)</div></div>
+      <div><div class="sn">+10<small> mnt</small></div><div class="sl">revisi pelafalan 3 shot, tanpa render ulang semua</div></div>
+    </div>
+  </div>
+  <p class="mute" style="margin-top:6px;font-size:20px">Diukur dari timestamp file dan log render run pertama, 2 Nov 2026. Deck dikerjakan sambil menunggu render.</p>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>04</span></div>
+</section>
+
 <!-- 4 -->
 <section class="s" data-id="pipeline">
   <div class="k">Alur kerja</div>
@@ -138,7 +197,101 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
     <div class="st h"><div class="n">06</div><h3>QA & kirim</h3><p>Grid frame, cek label/tangan/bibir, transkrip vs naskah, re-take per shot bila salah ucap.</p><div class="who">Agent → approval PM</div></div>
   </div>
   <p class="mute" style="margin-top:70px;font-size:26px">Orkestrasi: satu agent utama merencanakan, generate, dan mereview; sub-agent paralel mengerjakan riset, render varian, dan QA. Setiap tahap menyimpan file di satu folder proyek, jadi tiap langkah bisa diulang sendiri.</p>
-  <div class="foot"><img src="media/logo.svg" alt=""><span>04</span></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>05</span></div>
+</section>
+
+<section class="s" data-id="arsitektur">
+  <div class="k">Diagram · siapa mengerjakan apa</div>
+  <h2 style="font-size:60px">Satu agent mengatur, model AI dipanggil per tahap.</h2>
+  <div style="margin-top:34px"><svg viewBox="0 0 1640 650" class="dg" role="img" aria-label="Arsitektur UGC Engine">
+<defs><marker id="ah" markerWidth="12" markerHeight="9" refX="11" refY="4.5" orient="auto"><polygon points="0 0, 12 4.5, 0 9" fill="#6b6762"/></marker><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1d1c1b" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid)"/>
+<path d="M 262 165 C 310 165, 310 300, 356 300" fill="none" stroke="#6b6762" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 262 295 C 310 295, 310 300, 356 300" fill="none" stroke="#6b6762" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 262 425 C 310 425, 310 300, 356 300" fill="none" stroke="#6b6762" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 510 168 L 510 214" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#ah)"/>
+<path d="M 510 214 L 510 168" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#ah)"/>
+<path d="M 510 386 L 510 436" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#ah)"/><text x="560" y="418" fill="#9b978f" font-size="14" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">paralel</text>
+<path d="M 662 300 C 710 300, 700 110, 756 110" fill="none" stroke="#6b6762" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 662 300 C 710 300, 700 255, 756 255" fill="none" stroke="#6b6762" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 662 300 C 710 300, 700 405, 756 405" fill="none" stroke="#6b6762" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 950 160 L 950 196" fill="none" stroke="#6b6762" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 950 312 L 950 346" fill="none" stroke="#6b6762" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 1140 404 C 1180 404, 1180 568, 1140 568" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#ah)"/><text x="1205" y="492" fill="#9b978f" font-size="14" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">simpan</text>
+<path d="M 1142 404 C 1190 404, 1190 165, 1236 165" fill="none" stroke="#FF3B30" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 1142 404 C 1190 404, 1190 295, 1236 295" fill="none" stroke="#FF3B30" stroke-width="2" marker-end="url(#ah)"/>
+<path d="M 1142 404 C 1190 404, 1190 425, 1236 425" fill="none" stroke="#FF3B30" stroke-width="2" marker-end="url(#ah)"/>
+<text x="20" y="92" fill="#9b978f" font-size="15" letter-spacing="2" font-family="Cascadia Mono,Consolas,monospace">INPUT</text>
+<rect x="20" y="125" width="240" height="80" rx="8" fill="#101012"/>
+<rect x="20" y="125" width="240" height="80" rx="8" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="2"/>
+<text x="140.0" y="159.0" fill="#f4f1ec" font-size="21" font-weight="700" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">Aset produk</text>
+<text x="140.0" y="186.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">foto · klaim boleh</text>
+<rect x="20" y="255" width="240" height="80" rx="8" fill="#101012"/>
+<rect x="20" y="255" width="240" height="80" rx="8" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="2"/>
+<text x="140.0" y="289.0" fill="#f4f1ec" font-size="21" font-weight="700" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">Referensi</text>
+<text x="140.0" y="316.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">iklan / gaya kreator</text>
+<rect x="20" y="385" width="240" height="80" rx="8" fill="#101012"/>
+<rect x="20" y="385" width="240" height="80" rx="8" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="2"/>
+<text x="140.0" y="419.0" fill="#f4f1ec" font-size="21" font-weight="700" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">Tema / topik</text>
+<text x="140.0" y="446.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">sudut cerita</text>
+<rect x="360" y="60" width="300" height="106" rx="8" fill="#101012"/>
+<rect x="360" y="60" width="300" height="106" rx="8" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="2"/>
+<text x="510.0" y="95.0" fill="#f4f1ec" font-size="21" font-weight="700" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">Approval PM</text>
+<text x="510.0" y="122.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">naskah · sheet · final</text>
+<text x="510.0" y="145.0" fill="#fb7185" font-size="15" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">3 titik cek manusia</text>
+<rect x="360" y="216" width="300" height="168" rx="8" fill="#101012"/>
+<rect x="360" y="216" width="300" height="168" rx="8" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="2"/>
+<text x="510.0" y="270.0" fill="#f4f1ec" font-size="21" font-weight="700" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">Agent utama</text>
+<text x="510.0" y="297.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">merencanakan · prompt</text>
+<text x="510.0" y="320.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">generate · QA · revisi</text>
+<text x="510.0" y="343.0" fill="#34d399" font-size="15" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">Hermes (Windows)</text>
+<rect x="360" y="438" width="300" height="100" rx="8" fill="#101012"/>
+<rect x="360" y="438" width="300" height="100" rx="8" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="2"/>
+<text x="510.0" y="470.0" fill="#f4f1ec" font-size="21" font-weight="700" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">Sub-agent riset</text>
+<text x="510.0" y="497.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">craft · tools · model</text>
+<text x="510.0" y="520.0" fill="#34d399" font-size="15" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">jalan paralel</text>
+<text x="760" y="40" fill="#9b978f" font-size="15" letter-spacing="2" font-family="Cascadia Mono,Consolas,monospace">PRODUKSI</text>
+<rect x="760" y="56" width="380" height="104" rx="8" fill="#101012"/>
+<rect x="760" y="56" width="380" height="104" rx="8" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="2"/>
+<text x="950.0" y="90.0" fill="#f4f1ec" font-size="21" font-weight="700" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">gpt-image-2</text>
+<text x="950.0" y="117.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">sheet persona · produk · lokasi</text>
+<text x="950.0" y="140.0" fill="#fbbf24" font-size="15" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">metode Dan Kieft</text>
+<rect x="760" y="198" width="380" height="114" rx="8" fill="#101012"/>
+<rect x="760" y="198" width="380" height="114" rx="8" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="2"/>
+<text x="950.0" y="237.0" fill="#f4f1ec" font-size="21" font-weight="700" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">Wan 3.0 (DashScope)</text>
+<text x="950.0" y="264.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">video + suara + lip-sync</text>
+<text x="950.0" y="287.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">9:16 · ID & EN paralel</text>
+<rect x="760" y="348" width="380" height="112" rx="8" fill="#101012"/>
+<rect x="760" y="348" width="380" height="112" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2"/>
+<text x="950.0" y="374.0" fill="#f4f1ec" font-size="21" font-weight="700" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">faster-whisper + ffmpeg</text>
+<text x="950.0" y="401.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">caption per kata · logo</text>
+<text x="950.0" y="424.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">end card · −14 LUFS</text>
+<text x="950.0" y="447.0" fill="#22d3ee" font-size="15" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">lokal, di PC ini</text>
+<rect x="760" y="520" width="380" height="96" rx="8" fill="#101012"/>
+<rect x="760" y="520" width="380" height="96" rx="8" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="2"/>
+<text x="950.0" y="562.0" fill="#f4f1ec" font-size="21" font-weight="700" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">Folder proyek</text>
+<text x="950.0" y="589.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">refs · kit · runs · deck</text>
+<text x="1240" y="92" fill="#9b978f" font-size="15" letter-spacing="2" font-family="Cascadia Mono,Consolas,monospace">OUTPUT</text>
+<rect x="1240" y="125" width="380" height="80" rx="8" fill="#101012"/>
+<rect x="1240" y="125" width="380" height="80" rx="8" fill="rgba(127,29,29,0.35)" stroke="#FF3B30" stroke-width="2"/>
+<text x="1430.0" y="159.0" fill="#f4f1ec" font-size="21" font-weight="700" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">Iklan ID 9:16</text>
+<text x="1430.0" y="186.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">Bahasa Indonesia</text>
+<rect x="1240" y="255" width="380" height="80" rx="8" fill="#101012"/>
+<rect x="1240" y="255" width="380" height="80" rx="8" fill="rgba(127,29,29,0.35)" stroke="#FF3B30" stroke-width="2"/>
+<text x="1430.0" y="289.0" fill="#f4f1ec" font-size="21" font-weight="700" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">Iklan EN 9:16</text>
+<text x="1430.0" y="316.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">English</text>
+<rect x="1240" y="385" width="380" height="80" rx="8" fill="#101012"/>
+<rect x="1240" y="385" width="380" height="80" rx="8" fill="rgba(127,29,29,0.35)" stroke="#FF3B30" stroke-width="2"/>
+<text x="1430.0" y="419.0" fill="#f4f1ec" font-size="21" font-weight="700" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">Link deck</text>
+<text x="1430.0" y="446.0" fill="#9b978f" font-size="16" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace">untuk tim / klien</text>
+<text x="1240" y="530" fill="#f4f1ec" font-size="15" font-weight="700" font-family="Cascadia Mono,Consolas,monospace">Legenda</text>
+<rect x="1240" y="539" width="22" height="15" rx="3" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/><text x="1270" y="552" fill="#9b978f" font-size="15" font-family="Cascadia Mono,Consolas,monospace">input klien</text>
+<rect x="1430" y="539" width="22" height="15" rx="3" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/><text x="1460" y="552" fill="#9b978f" font-size="15" font-family="Cascadia Mono,Consolas,monospace">agent</text>
+<rect x="1240" y="567" width="22" height="15" rx="3" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/><text x="1270" y="580" fill="#9b978f" font-size="15" font-family="Cascadia Mono,Consolas,monospace">model AI (API)</text>
+<rect x="1430" y="567" width="22" height="15" rx="3" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/><text x="1460" y="580" fill="#9b978f" font-size="15" font-family="Cascadia Mono,Consolas,monospace">tool lokal</text>
+<rect x="1240" y="595" width="22" height="15" rx="3" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/><text x="1270" y="608" fill="#9b978f" font-size="15" font-family="Cascadia Mono,Consolas,monospace">approval manusia</text>
+<rect x="1430" y="595" width="22" height="15" rx="3" fill="rgba(127,29,29,0.35)" stroke="#FF3B30" stroke-width="1.5"/><text x="1460" y="608" fill="#9b978f" font-size="15" font-family="Cascadia Mono,Consolas,monospace">hasil</text>
+</svg></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>06</span></div>
 </section>
 
 <!-- 5 -->
@@ -150,7 +303,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
     <div><img src="media/sheet_nuva.jpg" alt=""><div class="cap">Bible produk · label terkunci</div></div>
     <div><img src="media/sheet_room.jpg" alt=""><div class="cap">Lokasi · termasuk sudut balik</div></div>
   </div>
-  <div class="foot"><img src="media/logo.svg" alt=""><span>05</span></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>07</span></div>
 </section>
 
 <!-- 6 -->
@@ -165,7 +318,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
     <tr><td>Caption & finishing</td><td><b>faster-whisper + ffmpeg</b> (lokal)</td></tr>
   </table>
   <p class="mute" style="margin-top:34px;font-size:24px">Dicoret: Sora 2 (API ditutup 24 Sep 2026). Belum ada vendor yang menjamin kualitas lip-sync Bahasa Indonesia — kita uji sendiri (slide 3).</p>
-  <div class="foot"><img src="media/logo.svg" alt=""><span>06</span></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>08</span></div>
 </section>
 
 <!-- 7 -->
@@ -186,7 +339,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
       <li><b>Bahasa lokal.</b> Bahasa Jakarta santai, sedikit campur Inggris, “keranjang kuning”.</li>
     </ul>
   </div>
-  <div class="foot"><img src="media/logo.svg" alt=""><span>07</span></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>09</span></div>
 </section>
 
 <!-- 8 -->
@@ -202,7 +355,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
     <tr><td>Komdigi (Okt 2026)</td><td>Meminta platform melabeli konten AI; belum jadi undang-undang</td><td>tercakup label platform</td></tr>
   </table>
   <p class="mute" style="margin-top:30px;font-size:22px">Ringkasan riset, bukan nasihat hukum — legal klien yang memberi persetujuan akhir.</p>
-  <div class="foot"><img src="media/logo.svg" alt=""><span>08</span></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>10</span></div>
 </section>
 
 <!-- 9 -->
@@ -229,7 +382,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
       </ul>
     </div>
   </div>
-  <div class="foot"><img src="media/logo.svg" alt=""><span>09</span></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>11</span></div>
 </section>
 
 </div>
