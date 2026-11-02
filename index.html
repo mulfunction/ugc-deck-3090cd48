@@ -110,7 +110,6 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
         <tr><td class="mute">Kreator</td><td>“Sari”, persona sintetis #01</td></tr>
         <tr><td class="mute">Struktur</td><td>hook → masalah → demo → tekstur → hasil → CTA</td></tr>
         <tr><td class="mute">Waktu render</td><td>~13 menit per klip 25 detik (720p, ID & EN paralel)</td></tr>
-        <tr><td class="mute">Biaya render</td><td>~$2,50 per bahasa (harga list $0,10/detik); total ~$7,40 termasuk perbaikan pelafalan</td></tr>
         <tr><td class="mute">Waktu manusia</td><td>3 approval: naskah, sheet, final</td></tr>
       </table>
     </div>
@@ -150,14 +149,13 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
 <!-- 6 -->
 <section class="s" data-id="stack">
   <div class="k">Model yang kita butuhkan</div>
-  <h2>Stack kita, dan cadangan untuk tiap jenis shot.</h2>
+  <h2>Stack yang kita pakai untuk tiap jenis shot.</h2>
   <table>
-    <tr><th style="width:22%">Pekerjaan</th><th style="width:30%">Utama (dipakai hari ini)</th><th>Cadangan / upgrade</th><th style="width:16%">Harga list</th></tr>
-    <tr><td>Sheet & still</td><td><b>gpt-image-2</b></td><td>Seedream (bila pakai Seedance)</td><td>langganan</td></tr>
-    <tr><td>Kreator bicara + suara</td><td><b>Wan 3.0</b> ref-to-video, audio bawaan</td><td>Audio dulu: ElevenLabs v3 → Kling Avatar v2 Pro / OmniHuman 1.5</td><td>$0,10/dtk 720p</td></tr>
-    <tr><td>B-roll produk & tangan</td><td><b>Wan 3.0</b> (render yang sama)</td><td>Seedance 2.5 (wajah harus didaftarkan), Kling 4.0, Veo 3.1 Fast</td><td>$0,10–0,47/dtk</td></tr>
-    <tr><td>Perbaikan lip-sync</td><td>—</td><td>Sync lipsync-2-pro</td><td>~$0,07–0,08/dtk</td></tr>
-    <tr><td>Caption & finishing</td><td><b>faster-whisper + ffmpeg</b> (lokal)</td><td>HyperFrames untuk end card animasi</td><td>gratis</td></tr>
+    <tr><th style="width:34%">Pekerjaan</th><th>Model</th></tr>
+    <tr><td>Sheet & still</td><td><b>gpt-image-2</b></td></tr>
+    <tr><td>Kreator bicara + suara</td><td><b>Wan 3.0</b> ref-to-video, audio & lip-sync bawaan</td></tr>
+    <tr><td>B-roll produk & tangan</td><td><b>Wan 3.0</b> (render yang sama)</td></tr>
+    <tr><td>Caption & finishing</td><td><b>faster-whisper + ffmpeg</b> (lokal)</td></tr>
   </table>
   <p class="mute" style="margin-top:34px;font-size:24px">Dicoret: Sora 2 (API ditutup 24 Sep 2026). Belum ada vendor yang menjamin kualitas lip-sync Bahasa Indonesia — kita uji sendiri (slide 3).</p>
   <div class="foot"><img src="media/logo.svg" alt=""><span>06</span></div>
@@ -210,16 +208,14 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
       <ul>
         <li>Sheet → kit → Wan 3.0 → caption → logo → export, satu perintah per tahap</li>
         <li>ID + EN dari satu set sheet</li>
-        <li>Salah ucap diperbaiki per shot (re-take ~$0,40), tanpa render ulang semua</li>
-        <li>Biaya tercatat per render</li>
+        <li>Salah ucap diperbaiki per shot, tanpa render ulang semua</li>
       </ul>
     </div>
     <div>
       <p class="mute" style="font-size:22px;letter-spacing:.08em;text-transform:uppercase">Belum dikerjakan</p>
       <ul>
         <li>Cek pelafalan lengkap oleh penutur asli</li>
-        <li>Satu master di-dubbing per bahasa (model lip-sync); saat ini EN adalah render kedua dari sheet yang sama</li>
-        <li>Jalur audio dulu (ElevenLabs + Kling Avatar) sebagai A/B</li>
+        <li>Saat ini versi EN adalah render kedua dari sheet yang sama</li>
         <li>Library persona (5–8 kreator), batch varian hook</li>
         <li>Keputusan framing: testimoni vs. “demo kreator”</li>
         <li>Uji end-to-end dengan produk + referensi klien asli</li>
