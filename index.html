@@ -79,7 +79,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
       <ul>
         <li>20–30 s, 9:16, 1080-ready, captions burned in safe zones</li>
         <li>Same creator, same product, every shot (no drift)</li>
-        <li>ID + EN from one shoot; AI disclosure built in</li>
+        <li>ID + EN from one shoot; AI disclosure via platform label</li>
         <li>BPOM-safe claims; loudness at platform spec (−14 LUFS)</li>
       </ul>
     </div>
@@ -117,7 +117,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
     <div class="st"><div class="n">02</div><h3>Continuity sheets</h3><p>Persona, product, location: anchor → multi-view sheet (Dan Kieft method).</p><div class="who">Agent → PM gate</div></div>
     <div class="st"><div class="n">03</div><h3>Shot kit</h3><p>Prompt builder writes one locked kit per language: refs in fixed order + staged shots.</p><div class="who">Agent</div></div>
     <div class="st"><div class="n">04</div><h3>Generate</h3><p>Reference-to-video with native voice and lip-sync. Variants run in parallel.</p><div class="who">Agent</div></div>
-    <div class="st"><div class="n">05</div><h3>Finish</h3><p>Word-level captions, AI label, loudness, safe-zone check, end card.</p><div class="who">Agent</div></div>
+    <div class="st"><div class="n">05</div><h3>Finish</h3><p>Word-level captions, loudness, safe-zone check, end card.</p><div class="who">Agent</div></div>
     <div class="st h"><div class="n">06</div><h3>QA & deliver</h3><p>Frame grid, label/hand/lip check, transcript diff vs script. Then export.</p><div class="who">Agent → PM gate</div></div>
   </div>
   <p class="mute" style="margin-top:70px;font-size:26px">Orchestration: one lead agent plans, generates and reviews; parallel sub-agents do research, variant renders and QA passes. Every stage writes files into one project folder, so any step can be re-run alone.</p>
@@ -179,11 +179,11 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
   <h2>The creator is synthetic. The ad has to say so, and can't fake a testimony.</h2>
   <table>
     <tr><th style="width:24%">Rule</th><th>What it means for us</th><th style="width:22%">Built in?</th></tr>
-    <tr><td>TikTok AIGC label</td><td>Toggle in Ads Manager + on-video label</td><td class="red">yes, top-right tag</td></tr>
+    <tr><td>TikTok AIGC label</td><td>AIGC toggle in Ads Manager at upload</td><td class="red">at upload (no on-video tag)</td></tr>
     <tr><td>Meta “AI info”</td><td>Auto-label via C2PA; manual for political/social</td><td>keep metadata</td></tr>
     <tr><td>FTC (US) 2024 rule</td><td>No AI person posing as a real customer reviewing the product</td><td>script framing — open</td></tr>
     <tr><td>BPOM Reg. 18/2024</td><td>Cosmetic claims about appearance only; no medical framing; product must be notified</td><td>claim check in stage 01</td></tr>
-    <tr><td>Komdigi (Oct 2026)</td><td>Asked platforms to label AI content; not yet law</td><td>covered by our label</td></tr>
+    <tr><td>Komdigi (Oct 2026)</td><td>Asked platforms to label AI content; not yet law</td><td>covered by platform labels</td></tr>
   </table>
   <p class="mute" style="margin-top:30px;font-size:22px">Research summary, not legal advice — client counsel signs off before launch.</p>
   <div class="foot"><img src="media/logo.svg" alt=""><span>08</span></div>
