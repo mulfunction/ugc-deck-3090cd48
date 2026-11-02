@@ -36,8 +36,8 @@ td b{color:var(--ink)}
 .st.h .who{color:var(--red)}
 /* videos */
 .vids{display:flex;gap:70px;align-items:flex-start;margin-top:10px}
-.vid{width:400px}
-.vid video{width:400px;height:711px;object-fit:contain;background:#000;border-radius:18px;display:block}
+.vid{width:360px}
+.vid video{width:360px;height:640px;object-fit:contain;background:#000;border-radius:18px;display:block}
 video:fullscreen,video:-webkit-full-screen{object-fit:contain!important;width:100%!important;height:100%!important;border-radius:0!important;background:#000}
 .vid .cap{font:600 20px "Cascadia Mono",Consolas,monospace;letter-spacing:.1em;color:var(--mute);margin-top:16px;text-transform:uppercase}
 .sheets{display:grid;grid-template-columns:1.5fr .78fr .78fr;gap:28px;margin-top:50px;align-items:start}
@@ -132,6 +132,24 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
   <div class="foot"><img src="media/logo.svg" alt=""><span>03</span></div>
 </section>
 
+<section class="s" data-id="sample2">
+  <div class="k">Contoh 2 · fashion pria · persona baru</div>
+  <div class="vids">
+    <div class="vid"><video src="media/rawa_id_v1.mp4" controls controlslist="nofullscreen" disablepictureinpicture playsinline preload="metadata" poster="media/rawa_id_v1.jpg"></video><div class="cap">Bahasa Indonesia</div><button class="fsb" type="button">&#x26F6; Layar penuh</button></div>
+    <div class="vid"><video src="media/rawa_en_v1.mp4" controls controlslist="nofullscreen" disablepictureinpicture playsinline preload="metadata" poster="media/rawa_en_v1.jpg"></video><div class="cap">English</div><button class="fsb" type="button">&#x26F6; Layar penuh</button></div>
+    <div style="flex:1;padding-top:10px">
+      <h2 style="font-size:58px">“RAWA Linen Shirt”<br><span class="mute">brand fiktif, menswear</span></h2>
+      <table>
+        <tr><td class="mute">Kreator</td><td>“Raka”, persona sintetis #02 · lokasi loft</td></tr>
+        <tr><td class="mute">Struktur</td><td>OOTD “1 kemeja, 3 gaya”: kantor → weekend → dinner → detail bahan → CTA</td></tr>
+        <tr><td class="mute">Waktu render</td><td>~11 menit per klip 25 detik (720p, ID & EN paralel)</td></tr>
+        <tr><td class="mute">Aset</td><td>sheet baru: persona, produk, lokasi — dipakai ulang untuk iklan berikutnya</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>04</span></div>
+</section>
+
 <section class="s" data-id="kecepatan">
   <div class="k">Internal · seberapa cepat contoh pertama dibuat</div>
   <h2 style="font-size:60px">Dari brief ke 2 iklan jadi: ±36 menit.</h2>
@@ -180,7 +198,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
     </div>
   </div>
   <p class="mute" style="margin-top:6px;font-size:20px">Diukur dari timestamp file dan log render run pertama, 2 Nov 2026. Deck dikerjakan sambil menunggu render.</p>
-  <div class="foot"><img src="media/logo.svg" alt=""><span>04</span></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>05</span></div>
 </section>
 
 <!-- 4 -->
@@ -197,7 +215,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
     <div class="st h"><div class="n">06</div><h3>QA & kirim</h3><p>Grid frame, cek label/tangan/bibir, transkrip vs naskah, re-take per shot bila salah ucap.</p><div class="who">Agent → approval PM</div></div>
   </div>
   <p class="mute" style="margin-top:70px;font-size:26px">Orkestrasi: satu agent utama merencanakan, generate, dan mereview; sub-agent paralel mengerjakan riset, render varian, dan QA. Setiap tahap menyimpan file di satu folder proyek, jadi tiap langkah bisa diulang sendiri.</p>
-  <div class="foot"><img src="media/logo.svg" alt=""><span>05</span></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>06</span></div>
 </section>
 
 <section class="s" data-id="arsitektur">
@@ -291,7 +309,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
 <rect x="1240" y="595" width="22" height="15" rx="3" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/><text x="1270" y="608" fill="#9b978f" font-size="15" font-family="Cascadia Mono,Consolas,monospace">approval manusia</text>
 <rect x="1430" y="595" width="22" height="15" rx="3" fill="rgba(127,29,29,0.35)" stroke="#FF3B30" stroke-width="1.5"/><text x="1460" y="608" fill="#9b978f" font-size="15" font-family="Cascadia Mono,Consolas,monospace">hasil</text>
 </svg></div>
-  <div class="foot"><img src="media/logo.svg" alt=""><span>06</span></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>07</span></div>
 </section>
 
 <!-- 5 -->
@@ -303,7 +321,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
     <div><img src="media/sheet_nuva.jpg" alt=""><div class="cap">Bible produk · label terkunci</div></div>
     <div><img src="media/sheet_room.jpg" alt=""><div class="cap">Lokasi · termasuk sudut balik</div></div>
   </div>
-  <div class="foot"><img src="media/logo.svg" alt=""><span>07</span></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>08</span></div>
 </section>
 
 <!-- 6 -->
@@ -318,7 +336,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
     <tr><td>Caption & finishing</td><td><b>faster-whisper + ffmpeg</b> (lokal)</td></tr>
   </table>
   <p class="mute" style="margin-top:34px;font-size:24px">Dicoret: Sora 2 (API ditutup 24 Sep 2026). Belum ada vendor yang menjamin kualitas lip-sync Bahasa Indonesia — kita uji sendiri (slide 3).</p>
-  <div class="foot"><img src="media/logo.svg" alt=""><span>08</span></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>09</span></div>
 </section>
 
 <!-- 7 -->
@@ -339,7 +357,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
       <li><b>Bahasa lokal.</b> Bahasa Jakarta santai, sedikit campur Inggris, “keranjang kuning”.</li>
     </ul>
   </div>
-  <div class="foot"><img src="media/logo.svg" alt=""><span>09</span></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>10</span></div>
 </section>
 
 <!-- 8 -->
@@ -355,7 +373,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
     <tr><td>Komdigi (Okt 2026)</td><td>Meminta platform melabeli konten AI; belum jadi undang-undang</td><td>tercakup label platform</td></tr>
   </table>
   <p class="mute" style="margin-top:30px;font-size:22px">Ringkasan riset, bukan nasihat hukum — legal klien yang memberi persetujuan akhir.</p>
-  <div class="foot"><img src="media/logo.svg" alt=""><span>10</span></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>11</span></div>
 </section>
 
 <!-- 9 -->
@@ -382,7 +400,7 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
       </ul>
     </div>
   </div>
-  <div class="foot"><img src="media/logo.svg" alt=""><span>11</span></div>
+  <div class="foot"><img src="media/logo.svg" alt=""><span>12</span></div>
 </section>
 
 </div>
