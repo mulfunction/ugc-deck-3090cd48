@@ -37,7 +37,8 @@ td b{color:var(--ink)}
 /* videos */
 .vids{display:flex;gap:70px;align-items:flex-start;margin-top:10px}
 .vid{width:400px}
-.vid video{width:400px;height:711px;object-fit:cover;background:#000;border-radius:18px;display:block}
+.vid video{width:400px;height:711px;object-fit:contain;background:#000;border-radius:18px;display:block}
+video:fullscreen,video:-webkit-full-screen{object-fit:contain!important;width:100%!important;height:100%!important;border-radius:0!important;background:#000}
 .vid .cap{font:600 20px "Cascadia Mono",Consolas,monospace;letter-spacing:.1em;color:var(--mute);margin-top:16px;text-transform:uppercase}
 .sheets{display:grid;grid-template-columns:1.5fr .78fr .78fr;gap:28px;margin-top:50px;align-items:start}
 .sheets img{width:100%;border-radius:10px;display:block}
@@ -101,8 +102,8 @@ ul li:before{content:"";position:absolute;left:0;top:31px;width:18px;height:3px;
 <section class="s" data-id="sample">
   <div class="k">Contoh · dibuat end-to-end hari ini</div>
   <div class="vids">
-    <div class="vid"><video src="media/nuva_id_v4.mp4" controls playsinline preload="metadata" poster="media/nuva_id_v4.jpg"></video><div class="cap">Bahasa Indonesia</div></div>
-    <div class="vid"><video src="media/nuva_en_v4.mp4" controls playsinline preload="metadata" poster="media/nuva_en_v4.jpg"></video><div class="cap">English</div></div>
+    <div class="vid"><video src="media/nuva_id_v5.mp4" controls playsinline preload="metadata" poster="media/nuva_id_v5.jpg"></video><div class="cap">Bahasa Indonesia</div></div>
+    <div class="vid"><video src="media/nuva_en_v5.mp4" controls playsinline preload="metadata" poster="media/nuva_en_v5.jpg"></video><div class="cap">English</div></div>
     <div style="flex:1;padding-top:10px">
       <h2 style="font-size:58px">“NUVA Bright Serum”<br><span class="mute">brand fiktif, skincare</span></h2>
       <table>
